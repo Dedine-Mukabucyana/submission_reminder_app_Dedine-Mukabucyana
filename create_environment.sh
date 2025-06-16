@@ -4,14 +4,14 @@ read -p "please enter your first name:" firstname
 # creating my first directory which is the main one
 MainDirectory="submission_reminder_$firstname"
 if [ ! -d "$MainDirectory" ]; then
-	mkdir "$MainDirectory"
+        mkdir "$MainDirectory"
 fi
 
 #Creating directories inside the main directory
 
-mkdir -p "$MainDirectory/app" \
-mkdir -p "$MainDirectory/modules" \
-mkdir -p "$MainDirectory/assets" \
+mkdir -p "$MainDirectory/app"
+mkdir -p "$MainDirectory/modules"
+mkdir -p "$MainDirectory/assets"
 mkdir -p "$MainDirectory/config"
 
 # creating empty files
@@ -20,9 +20,3 @@ touch "$MainDirectory/modules/functions.sh"
 touch "$MainDirectory/assets/submissions.txt"
 touch "$MainDirectory/config/config.env"
 touch "$MainDirectory/startup.sh"
-
-chmod +x"$MainDirectory/app/reminder.sh"
-chmod +x "$MainDirectory/modules/functions.sh"
-chmod +x "$MainDirectory/assets/submissions.txt"
-chmod +x "$MainDirectory/config/config.env"
-chmod +x "$MainDirectory/startup.sh"
