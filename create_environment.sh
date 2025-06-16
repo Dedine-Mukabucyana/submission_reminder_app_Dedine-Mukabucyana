@@ -1,16 +1,14 @@
 #!/bin/bash
 
 read -p "please enter your first name:" firstname
-# creating my first directory which is main
-
+# creating my first directory which is the main one
 MainDirectory="submission_reminder_$firstname"
 if [ ! -d "$MainDirectory" ]; then
-	mkdir "$submissions"
+	mkdir "$MainDirectory"
 fi
 cd "$MainDirectory"
-if ! cd "MainDirectory"; then
-	echo "Entering directory failed $MainDirectory" >&2
-fi
+
+
 #Creating directories inside the main directory
 
 mkdir -p "$MainDirectory/app"
